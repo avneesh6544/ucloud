@@ -1,79 +1,91 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Insert data in MySQL database using Ajax</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
-<body>
-<div style="margin: auto;width: 60%;">
-	<div class="alert alert-success alert-dismissible" id="success" style="display:none;">
-	  <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-	</div>
-	<div class="alert alert-danger alert-dismissible" id="error" style="display:none;">
-	  <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-	</div>
-	<button type="button" class="btn btn-success btn-sm" id="register">Register</button> <button type="button" class="btn btn-success btn-sm" id="login">Login</button>
-	
-	<form id="register_form" name="form1" method="post">
-		<div class="form-group">
-			<label for="email">Name:</label>
-			<input type="text" class="form-control" id="name" placeholder="Name" name="name">
+<?php include 'header.php'; ?>
+<div class="container">
+	<div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+		<div class="panel panel-info">
+			<div class="alert alert-success alert-dismissible" id="success" style="display:none;">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+			</div>
+			<div class="alert alert-danger alert-dismissible" id="error" style="display:none;">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+			</div>
+			<div class="panel-heading">
+				<div class="panel-title">Sign Up</div>
+				<div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="login.php" >Sign In</a></div>
+			</div>  
+			<div class="panel-body" >
+				<form id="register_form" class="form-horizontal" role="form" method="post">
+					<div id="signupalert" style="display:none" class="alert alert-danger">
+						<p>Error:</p>
+						<span></span>
+					</div>
+					<div class="form-group">
+						<label for="name" class="col-md-3 control-label">Full Name :</label>
+						<div class="col-md-9">
+							<input type="text" class="form-control" id="name" name="name" data-validation="required" placeholder="Full Name">
+						</div>
+					</div>	
+					<div class="form-group">
+						<label for="email" class="col-md-3 control-label">Email :</label>
+						<div class="col-md-9">
+							<input type="text" class="form-control" id="email" name="email" data-validation="required email" placeholder="Email Address">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="contact" class="col-md-3 control-label">Contact NO :</label>
+						<div class="col-md-9">
+							<input type="text" class="form-control" id="contact" name="contact" data-validation="required number" placeholder="Contact NO">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="password" class="col-md-3 control-label">Password :</label>
+						<div class="col-md-9">
+							<input type="password" class="form-control" id="password" name="password" data-validation="required" placeholder="Password">
+						</div>
+					</div>
+					<!-- <div class="form-group">
+						<label for="cpassword" class="col-md-3 control-label">Confirm Password :</label>
+						<div class="col-md-9">
+							<input type="password" class="form-control" id="cpasswod" name="cpasswod" data-validation="required" data-rule-equalTo="#password" placeholder="Confirm Password">
+						</div>
+					</div> -->
+					<div class="form-group">
+						<!-- Button -->                                        
+						<div class="col-md-offset-3 col-md-9">
+							<!-- <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button> -->
+							<input type="submit" id="butsave" name="save" class="btn btn-info" value="Sign Up">
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
-		<div class="form-group">
-			<label for="pwd">Email:</label>
-			<input type="email" class="form-control" id="email" placeholder="Email" name="email">
-		</div>
-		<div class="form-group">
-			<label for="pwd">Password:</label>
-			<input type="password" class="form-control" id="password" placeholder="Password" name="password">
-		</div>
-		<input type="button" name="save" class="btn btn-primary" value="Register" id="butsave">
-	</form>
-	<form id="login_form" name="form1" method="post" style="display:none;">
-		
-		<div class="form-group">
-			<label for="pwd">Email:</label>
-			<input type="email" class="form-control" id="email_log" placeholder="Email" name="email">
-		</div>
-		<div class="form-group">
-			<label for="pwd">Password:</label>
-			<input type="password" class="form-control" id="password_log" placeholder="Password" name="password">
-		</div>
-		<input type="button" name="save" class="btn btn-primary" value="Login" id="butlogin">
-	</form>
+	</div> 
 </div>
 
 <script>
-$(document).ready(function() {
-	$('#login').on('click', function() {
-		$("#login_form").show();
-		$("#register_form").hide();
-	});
-	$('#register').on('click', function() {
-		$("#register_form").show();
-		$("#login_form").hide();
-	});
+
+$(document).ready(function(){
+
 	$('#butsave').on('click', function() {
-		$("#butsave").attr("disabled", "disabled");
+		// $("#butsave").attr("disabled", "disabled");
 		var name = $('#name').val();
 		var email = $('#email').val();
-		var password = $('#password').val();
+        var password = $('#password').val();
+        var contact = $('#contact').val();
 		if(name!="" && email!="" && password!="" ){
 			$.ajax({
 				url: "userregistraction.php",
 				type: "POST",
 				data: {
-					type: 1,
 					name: name,
 					email: email,
-					password: password						
+					contact: contact,
+					password: password					
 				},
 				cache: false,
 				success: function(dataResult){
 					var dataResult = JSON.parse(dataResult);
 					if(dataResult.statusCode==200){
-						$("#butsave").removeAttr("disabled");
+						$("#butsave").attr("disabled", "disabled");
 						$('#register_form').find('input:text').val('');
 						$("#success").show();
 						$('#success').html('Registration successful !'); 						
@@ -82,45 +94,14 @@ $(document).ready(function() {
 						$("#error").show();
 						$('#error').html('Email ID already exists !');
 					}
-					
 				}
 			});
 		}
 		else{
-			alert('Please fill all the field !');
-		}
-	});
-	$('#butlogin').on('click', function() {
-		var email = $('#email_log').val();
-		var password = $('#password_log').val();
-		if(email!="" && password!="" ){
-			$.ajax({
-				url: "userregistraction.php",
-				type: "POST",
-				data: {
-					type:2,
-					email: email,
-					password: password						
-				},
-				cache: false,
-				success: function(dataResult){
-					var dataResult = JSON.parse(dataResult);
-					if(dataResult.statusCode==200){
-						location.href = "home.php";						
-					}
-					else if(dataResult.statusCode==201){
-						$("#error").show();
-						$('#error').html('Invalid EmailId or Password !');
-					}
-					
-				}
-			});
-		}
-		else{
-			alert('Please fill all the field !');
+			$.validate();
 		}
 	});
 });
 </script>
-</body>
-</html>    
+
+<?php include 'footer.php'; ?>
