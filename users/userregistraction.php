@@ -1,7 +1,5 @@
 <?php
-
 include_once('db.php');
-
 	session_start();
 	
 		$name = $_POST['name'];
@@ -13,7 +11,7 @@ include_once('db.php');
 		VALUES ('$name','$email','$contact','$password','1')");
 
 		if ($sql) {
-			$_SESSION['email']=$email;
+			// $_SESSION['email']=$email;
 			echo json_encode(array("statusCode"=>200));
 		} 
 		else {

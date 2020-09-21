@@ -17,15 +17,15 @@
 					<form id="login_form" class="form-horizontal" role="form" method="post">
 						<div style="margin-bottom: 25px" class="input-group">
 							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-							<input type="text" class="form-control" id="email" name="email" value="" data-validation="required" placeholder="Email">                                        
+							<input type="text" class="form-control" id="email" name="email" value="" placeholder="Email">                                        
 						</div>	
 						<div style="margin-bottom: 25px" class="input-group">
 							<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-							<input id="password" type="password" class="form-control" name="password" data-validation="required" placeholder="Password">
+							<input id="password" type="password" class="form-control" name="password" placeholder="Password">
 						</div>
 						<div style="margin-top:10px" class="form-group">
 							<div class="col-sm-12 controls">
-								<input type="submit" name="save" class="btn btn-success" value="Login" id="butlogin">
+								<input type="button" name="save" class="btn btn-success" value="Login" id="butlogin">
 							</div>
 						</div>
 						<div class="form-group">
@@ -38,9 +38,8 @@
 						</div>    
 					</form>
 				</div>
-			</div>                     
-		</div>  
-	</div>
+		</div>                     
+	</div>  
 </div>
 
 
@@ -71,7 +70,7 @@ $(document).ready(function() {
 			});
 		}
 		else{
-			$.validate();
+			alert('all feild is required');
 		}
 	});
 });
