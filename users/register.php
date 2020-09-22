@@ -85,6 +85,7 @@ $(document).ready(function(){
 				success: function(dataResult){
 					var dataResult = JSON.parse(dataResult);
 					if(dataResult.statusCode==200){
+						location.href = "login.php";
 						$("#butsave").attr("disabled", "disabled");
 						$('#register_form').find('input:text').val('');
 						$("#success").show();
