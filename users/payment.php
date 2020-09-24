@@ -1,19 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Insert data in MySQL database using Ajax</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
+<?php include 'header.php'; ?>
 <body>
-<div style="margin: auto;width: 60%;">
-    <form action="userpayment.php" method="POST">
-    <div class="form-group">
-        <p>payment ammount (in razorpay amt to be in submit of current. eg. 1000 = Rs.100)</p>
-        <input type="text" class="form-control" id="payment" name="payment">
-    </div>
-        <input type="submit" name="submit" class="btn btn-primary" value="payment" id="butsave">
+<div style="margin: auto;width: 40%;">
+    <form action="userpayment.php" method="POST"><br>
+        <h2 class="text-center">Please Select A Plan</h2><br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <p><h3><b>VIP</b></h3></p>
+                        <p>
+                            <span class="price-icon"><b>₹</b></span>
+                            <span class="plan-price">399</span>
+                        </p>
+                        <p><input type="radio" id="payment" name="payment" value="39900" checked></p>   
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center">
+                            <p><h3><b>PREMIUM</b></h3></p>
+                            <p>
+                                <span class="price-icon"><b>₹</b></span>
+                                <span class="plan-price">1499</span>
+                            </p>
+                            <p><input type="radio" id="payment" name="payment" value="14990"></p>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    <br><br>
+        <p class="text-center"><input type="submit" name="submit" class="btn btn-primary" value="Proceed To Payment" id="butsave"></p>
 	</form>
 </div>
 </body>
-</html>    
+<?php include 'footer.php'; ?>

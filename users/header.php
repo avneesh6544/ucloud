@@ -20,6 +20,11 @@
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script> -->
     
+    <style>
+.panel-heading.text-center span.plan-price {
+    font-size: 40px;
+}
+</style>
     
 </head>
 <body>

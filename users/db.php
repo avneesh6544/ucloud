@@ -43,6 +43,12 @@
 	}
 	
 	}
+	public function payment($razorpay_payment_id,$razorpay_order_id,$razorpay_signature)
+	{
+	$insertpayment = mysqli_query($this->dbh,"insert into payment_laser(`payment_id`,`order_id`,`signature_hash`)
+	values('$razorpay_payment_id','$razorpay_order_id','$razorpay_signature')");
+	return $insertpayment;
+	}
 
 }
 

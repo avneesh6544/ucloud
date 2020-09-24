@@ -29,20 +29,28 @@ $order = $api->order->create(array(
 ?>
 
 <!-- <meta name="viewport" content="width=device-width"> -->
+<div style="margin: auto;width: 10%;">
+
+		<br>
 <form action="success.php" method="POST">
-	<script
-		src="https://checkout.razorpay.com/v1/checkout.js"
-		data-key="<?php echo $keyId ?>"
-		data-amount="<?php echo $order->amount ?>"
-		data-currency="INR"
-		data-order_id="<?php echo $order->id ?>"
-		data-buttontext="pay with razorpay"
-		data-name="Myinboxhub"
-		data-description="For Donation"
-		data-image="<?php echo 'https://myinboxhub.co.in/data/logo/logo.png' ?>"
-		data-prefill.name="<?php echo $name ?>"
-		data.prefill.email="<?php echo $email ?>"
-		data-theme.color="#foa43c"
-	></script>
-	<input type="hidden" custom="Hidden Element" name="hidden">
+<script
+	src="https://checkout.razorpay.com/v1/checkout.js"
+	data-key="<?php echo $keyId ?>"
+	data-amount="<?php echo $order->amount ?>"
+	data-currency="INR"
+	data-order_id="<?php echo $order->id ?>"
+	data-buttontext="pay with razorpay"
+	data-name="Myinboxhub"
+	data-description="For Donation"
+	data-image="<?php echo 'https://myinboxhub.co.in/data/logo/logo.png' ?>"
+	data-prefill.name="<?php echo $name ?>"
+	data.prefill.email="<?php echo $email ?>"
+	data-theme.color="#foa43c"
+></script>
+<input type="hidden" custom="Hidden Element" name="hidden">
+
+	
 </form>
+
+</div>
+	

@@ -15,12 +15,12 @@ $classOtp = new otpprocess();
 		
 			if($getUserSql)
 			{
-				 $mobileNo = $getUserSql[3];
-				 $randomid = mt_rand(1000,9999);  
-				 $sendOtpRequest = $classOtp->send($mobileNo,$randomid);
-				 var_dump($sendOtpRequest);
-				 die();
-		    //	echo json_encode(array("statusCode"=>200));
+				//  $mobileNo = $getUserSql[3];
+				//  $randomid = mt_rand(1000,9999);  
+				//  $sendOtpRequest = $classOtp->send($mobileNo,$randomid);
+				//  var_dump($sendOtpRequest);
+				//  die();
+		    	echo json_encode(array("statusCode"=>200));
 			}
 			else
 			{

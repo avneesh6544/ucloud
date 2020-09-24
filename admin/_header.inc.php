@@ -150,6 +150,8 @@ $groupDetails = $db->getRows("SELECT config_group FROM site_config WHERE config_
                                             <ul class="nav child_menu">
                                                 <li><a href="<?php echo ADMIN_WEB_ROOT; ?>/user_manage.php"><?php echo adminFunctions::makeSafe(UCWords(strtolower(adminFunctions::t('manage_users', 'manage users')))); ?></a></li>
                                                 <li><a href="<?php echo ADMIN_WEB_ROOT; ?>/user_add.php"><?php echo adminFunctions::makeSafe(UCWords(strtolower(adminFunctions::t('add_user', 'add user')))); ?></a></li>
+                                                <li><a href="<?php echo ADMIN_WEB_ROOT; ?>/payment.php"><?php echo adminFunctions::makeSafe(UCWords(strtolower(adminFunctions::t('payment', 'payment')))); ?></a></li>
+                                                
                                                 <li class="nav_received_payments">
                                                     <a><?php echo adminFunctions::makeSafe(UCWords(strtolower(adminFunctions::t('received_payments', 'received payments')))); ?><span class="fa fa-chevron-down"></span></a>
                                                     <ul class="nav child_menu">

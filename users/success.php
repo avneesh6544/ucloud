@@ -1,17 +1,23 @@
 <?php
 require_once 'db.php';
+$classNameDb = new DB_con();
 
-echo "<pre>";print_r($_POST);
+// echo "<pre>";print_r($_POST);die();
 
-$sql = "INSERT INTO payment_laser (`payment_id`,`order_id`,`signature_hash`) VALUES ('".$_POST['razorpay_payment_id']."','".$_POST['razorpay_order_id']."','".$_POST['razorpay_signature']."')";
+$razorpay_payment_id = $_POST['razorpay_payment_id'];
+$razorpay_order_id = $_POST['razorpay_order_id'];
+$razorpay_signature = $_POST['razorpay_signature'];
 
-if($conn->query($sql) === TRUE) {
-    echo "new record created sucessfully";
+
+$insertUserSql = $classNameDb->payment($razorpay_payment_id,$razorpay_order_id,$razorpay_signature);
+
+if($insertUserSql === TRUE) {
+    echo "your payment sucess";
 }else{
     echo "Error: ".$sql."<br>".$conn->error;
 }
 
-$conn->close();
+// $conn->close();
 
 
 ?>

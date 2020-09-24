@@ -1,12 +1,38 @@
-<?php
-echo "jgdhjh";
-// session_start(); 
-// if($_SESSION['email']){
-//     echo $_SESSION['email'];
-// }else{
-//     $url = $server.'/ucloud/index.php';
-		
-//     header('location:'.$url);
-// }
-  
-  ?>
+<?php include 'header.php'; ?>
+<body>
+<div style="margin: auto;width: 40%;">
+    
+        <h2 class="text-center">payment</h2><br><br>
+        <!-- <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <p><h3><b>VIP</b></h3></p>
+                        <p>
+                            <span class="price-icon"><b>₹</b></span>
+                            <span class="plan-price">399</span>
+                        </p>
+                        <p><input type="radio" id="payment" name="payment" value="39900" checked></p>   
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center">
+                            <p><h3><b>PREMIUM</b></h3></p>
+                            <p>
+                                <span class="price-icon"><b>₹</b></span>
+                                <span class="plan-price">1499</span>
+                            </p>
+                            <p><input type="radio" id="payment" name="payment" value="14990"></p>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    <br><br> -->
+        <p class="text-center"><a href="payment.php"><input type="submit" name="submit" class="btn btn-primary" value="Proceed To Payment" id="butsave"></a></p>
+	
+</div>
+</body>
+<?php include 'footer.php'; ?>
