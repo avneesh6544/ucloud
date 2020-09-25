@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once('db.php');
 include_once('otp/otpprocess.php');
 $classNameDb = new DB_con();
@@ -12,7 +12,7 @@ $classOtp = new otpprocess();
 		
 			$getUserSql=$classNameDb->checkUserMember($email,$password);
 			
-		
+			
 			if($getUserSql)
 			{
 				//  $mobileNo = $getUserSql[3];
@@ -20,6 +20,10 @@ $classOtp = new otpprocess();
 				//  $sendOtpRequest = $classOtp->send($mobileNo,$randomid);
 				//  var_dump($sendOtpRequest);
 				//  die();
+				$_SESSION['id']=$getUserSql[0];
+				$_SESSION['name']=$getUserSql[1];
+				$_SESSION['email']=$getUserSql[2];
+				
 		    	echo json_encode(array("statusCode"=>200));
 			}
 			else

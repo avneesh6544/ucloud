@@ -53,6 +53,8 @@ $limitedRS = $db->getRows("SELECT payment_laser.pay_id, payment_laser.created_at
 $data = array();
 if (COUNT($limitedRS) > 0)
 {
+    // echo "<pre>";
+    // print_r($limitedRS);die();
     foreach ($limitedRS AS $row)
     {
         $lRow = array();

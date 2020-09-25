@@ -33,6 +33,7 @@ $order = $api->order->create(array(
 
 		<br>
 <form action="success.php" method="POST">
+<input type="hidden" value="<?php echo $order->amount ?>" name="ammount">
 <script
 	src="https://checkout.razorpay.com/v1/checkout.js"
 	data-key="<?php echo $keyId ?>"

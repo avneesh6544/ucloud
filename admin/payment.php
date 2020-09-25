@@ -243,7 +243,9 @@ include_once('_header.inc.php');
                                     <th class="align-left"><?php echo UCWords(adminFunctions::t("ammount", "ammount")); ?></th>
                                     <th class="align-left"><?php echo UCWords(adminFunctions::t("order_id", "order id")); ?></th>
                                     <th class="align-left"><?php echo UCWords(adminFunctions::t("payment_id", "payment id")); ?></th>
+                                    <th class="align-left"><?php echo UCWords(adminFunctions::t("payment_ammount", "ammount")); ?></th>                                                                        
                                     <th class="align-left"><?php echo UCWords(adminFunctions::t("status", "status")); ?></th>
+                                    <th class="align-left"><?php echo UCWords(adminFunctions::t("payment_date", "payment date")); ?></th>
                                     <th class="align-left"><?php echo UCWords(adminFunctions::t("action", "action")); ?></th>
                                 </tr>
                             </thead>
