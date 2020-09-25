@@ -27,6 +27,7 @@ include_once('_header.inc.php');
                 { bSortable: false, sWidth: '3%', sName: 'file_icon', sClass: "center adminResponsiveHide" },
                 { sName: 'payment_date', sWidth: '15%' , sClass: "center" },
                 { sName: 'user_name', sWidth: '18%' , sClass: "center adminResponsiveHide" },
+                { sName: 'ammount', sWidth: '18%' , sClass: "center adminResponsiveHide" },
                 { sName: 'order_id' , sClass: "center adminResponsiveHide" },
                 { sName: 'payment_id', sWidth: '12%', sClass: "center" },
                 { sName: 'status', sWidth: '12%', sClass: "center" },
@@ -239,6 +240,7 @@ include_once('_header.inc.php');
                                     <th></th>
                                     <th class="align-left"><?php echo UCWords(adminFunctions::t("payment_date", "payment date")); ?></th>
                                     <th class="align-left"><?php echo UCWords(adminFunctions::t("user_name", "user name")); ?></th>
+                                    <th class="align-left"><?php echo UCWords(adminFunctions::t("ammount", "ammount")); ?></th>
                                     <th class="align-left"><?php echo UCWords(adminFunctions::t("order_id", "order id")); ?></th>
                                     <th class="align-left"><?php echo UCWords(adminFunctions::t("payment_id", "payment id")); ?></th>
                                     <th class="align-left"><?php echo UCWords(adminFunctions::t("status", "status")); ?></th>
