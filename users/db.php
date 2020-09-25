@@ -1,11 +1,5 @@
 
 <?php
-	// $servername = "localhost";
-	// $username = "root";
-	// $password = "";
-	// $db="ucloud";
-	// /*Create connection*/
-	// $conn = mysqli_connect($servername, $username, $password,$db);
 	
 	define('DB_SERVER','localhost');
 	define('DB_USER','root');
@@ -43,10 +37,10 @@
 	}
 	
 	}
-	public function payment($razorpay_payment_id,$razorpay_order_id,$razorpay_signature)
+	public function payment($user_id,$razorpay_payment_id,$razorpay_order_id,$razorpay_signature,$ammount)
 	{
-	$insertpayment = mysqli_query($this->dbh,"insert into payment_laser(`payment_id`,`order_id`,`signature_hash`)
-	values('$razorpay_payment_id','$razorpay_order_id','$razorpay_signature')");
+	$insertpayment = mysqli_query($this->dbh,"insert into payment_laser(`user_id`,`payment_id`,`order_id`,`signature_hash`,`status`,`ammount`)
+	values('$user_id','$razorpay_payment_id','$razorpay_order_id','$razorpay_signature','1','$ammount')");
 	return $insertpayment;
 	}
 
