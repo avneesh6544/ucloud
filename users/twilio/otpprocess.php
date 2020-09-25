@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
     }else{
         header('Location: ../login.php');
     }
-    print_r($sessionotp);
+    // print_r($sessionotp);
     
 }
 ?>

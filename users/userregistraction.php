@@ -1,12 +1,16 @@
 <?php
+
+
+// print_r($_POST);die();
+// echo 'hello';die();
 // include_once('db.php');
 // $classNameDb = new DB_con();
 	
-// 	$name = $_POST['name'];
-// 	$email = $_POST['email'];
-// 	$contact = $_POST['contact'];
-// 	$password = $_POST['password'];
-	
+	// $name = $_POST['name'];
+	// $email = $_POST['email'];
+	// $contact = $_POST['contact'];
+	// $password = $_POST['password'];
+	// print_r($email);die();
 // 	$insertUserSql=$classNameDb->insertUserMember($name,$email,$contact,$password);
 // 	if($insertUserSql)
 // 	{	
@@ -18,7 +22,7 @@
 // 	}	
 
 // includes and security
-include_once('./admin/_local_auth.inc.php');
+include_once('../admin/_local_auth.inc.php');
 
 // account types
 $accountTypeDetails = $db->getRows('SELECT id, level_id, label FROM user_level WHERE id > 0 ORDER BY level_id ASC');
@@ -67,19 +71,19 @@ $uploadedAvatar = null;
 
 if(strlen($first_name) == 0)
     {
-		echo json_encode(array("statusCode"=>201, "message": "enter_first_name"));
+		echo json_encode(array("statusCode"=>201, "message", "enter_first_name"));
     }
 elseif(strlen($last_name) == 0)
     {
-		echo json_encode(array("statusCode"=>201, "message": "enter_last_name"));
+		echo json_encode(array("statusCode"=>201, "message", "enter_last_name"));
     }
 elseif(strlen($email_address) == 0)
     {
-		echo json_encode(array("statusCode"=>201, "message": "enter_email_address"));
+		echo json_encode(array("statusCode"=>201, "message", "enter_email_address"));
     }
 elseif(validation::validEmail($email_address) == false)
     {
-		echo json_encode(array("statusCode"=>201, "message": "entered_email_address_invalid"));
+		echo json_encode(array("statusCode"=>201, "message", "entered_email_address_invalid"));
     }
 // elseif($password != $confirm_password)
 // {
@@ -90,7 +94,7 @@ $checkEmail = UserPeer::loadUserByEmailAddress($email_address);
         if($checkEmail)
         	{
 				// email already exist
-				echo json_encode(array("statusCode"=>201, "message": "email already exists"));
+				echo json_encode(array("statusCode"=>201, "message", "email already exists"));
 			}	
         else
         {
@@ -98,7 +102,7 @@ $checkEmail = UserPeer::loadUserByEmailAddress($email_address);
             if($checkUser)
             {
                 // username exists
-				echo json_encode(array("statusCode"=>201, "message": "Username already exists on another account"));
+				echo json_encode(array("statusCode"=>201, "message", "Username already exists on another account"));
             }
 		}
 
@@ -118,7 +122,7 @@ $checkEmail = UserPeer::loadUserByEmailAddress($email_address);
  $dbInsert->remainingBWDownload = (int) $remainingBWDownload ? (int) $remainingBWDownload : NULL;
  if(!$dbInsert->insert())
         {
-			echo json_encode(array("statusCode"=>201, "message": "error_problem_record"));
+			echo json_encode(array("statusCode"=>201, "message", "error_problem_record"));
 		}
 else {	
 		echo json_encode(array("statusCode"=>200));

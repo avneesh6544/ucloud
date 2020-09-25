@@ -88,7 +88,7 @@ $title = 'Mr';
 						<!-- Button -->                                        
 						<div class="col-md-offset-3 col-md-9">
 							<!-- <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button> -->
-							<input type="submit" id="butsave" name="save" class="btn btn-info" value="Sign Up">
+							<input type="button" id="butsave" name="save" class="btn btn-info" value="Sign Up">
 						</div>
 					</div>
 				</form>
@@ -102,18 +102,17 @@ $title = 'Mr';
 $(document).ready(function(){
 
 	$('#butsave').on('click', function() {
-		alert("asds");
+		// alert("asds");
 		// $("#butsave").attr("disabled", "disabled");
 		var title = $('#title').val();
 		var first_name = $('#first_name').val();
-		var first_name = $('#first_name').val();
+		// var first_name = $('#first_name').val();
 		var last_name = $('#last_name').val();
 		var email = $('#email').val();
 		var username = $('#username').val();
         var password = $('#password').val();
-        var contact = $('#contact').val();
+		var contact = $('#contact').val();
 		if(first_name!="" && email!="" && password!=""){
-			alert("aaaa");
 			$.ajax({
 				url: "userregistraction.php",
 				type: "POST",
@@ -128,7 +127,7 @@ $(document).ready(function(){
 				},
 				cache: false,
 				success: function(dataResult){
-					alert("ajax");
+					
 					var dataResult = JSON.parse(dataResult);
 					if(dataResult.statusCode==200){
 						location.href = "login.php";
@@ -145,7 +144,8 @@ $(document).ready(function(){
 			});
 		}
 		else{
-			$.validate();
+			alert(123);
+			// $.validate();
 		}
 	});
 });
