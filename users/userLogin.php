@@ -12,7 +12,6 @@ $classOtp = new otpprocess();
 		
 			$getUserSql=$classNameDb->checkUserMember($email,$password);
 			
-			
 			if($getUserSql)
 			{
 				//  $mobileNo = $getUserSql[3];
@@ -23,6 +22,8 @@ $classOtp = new otpprocess();
 				$_SESSION['id']=$getUserSql[0];
 				$_SESSION['name']=$getUserSql[1];
 				$_SESSION['email']=$getUserSql[2];
+				$_SESSION['mobile']=$getUserSql[3];
+				// print_r($getUserSql);die();
 				
 		    	echo json_encode(array("statusCode"=>200));
 			}
