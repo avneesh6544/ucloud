@@ -48,9 +48,7 @@ if(strlen($filterUserId))
 }
 
 $totalRS   = $db->getValue("SELECT COUNT(payment_laser.pay_id) AS total FROM payment_laser");
-// $limitedRS = $db->getRows("SELECT payment_laser.user_id,payment_laser.pay_id, payment_laser.created_at, payment_laser.order_id, payment_laser.payment_id,payment_laser.status,payment_laser.ammount FROM payment_laser");
-
-$limitedRS = $db->getRows("SELECT payment_laser.pay_id, payment_laser.created_at, payment_laser.order_id, payment_laser.payment_id,payment_laser.status,payment_laser.ammount, user_member.name, user_member.id AS user_id FROM payment_laser LEFT JOIN user_member ON payment_laser.user_id = user_member.id " . $sqlClause . " ORDER BY " . $sort . " " . $sSortDir_0 . " LIMIT " . $iDisplayStart . ", " . $iDisplayLength);
+$limitedRS = $db->getRows("SELECT payment_laser.pay_id, payment_laser.created_at, payment_laser.order_id, payment_laser.payment_id, payment_laser.ammount, payment_laser.status, user_member.name, user_member.id AS user_id FROM payment_laser LEFT JOIN user_member ON payment_laser.user_id = user_member.id");
 
 $data = array();
 if (COUNT($limitedRS) > 0)
@@ -62,13 +60,14 @@ if (COUNT($limitedRS) > 0)
         $lRow = array();
         $icon        = 'assets/images/icons/system/16x16/process.png';
         $lRow[]      = '<img src="' . $icon . '" width="16" height="16" title="payment" alt="payment"/>';
-        // $lRow[]      = coreFunctions::formatDate($row['date_created'], SITE_CONFIG_DATE_TIME_FORMAT);
+        $lRow[]      = coreFunctions::formatDate($row['created_at'], SITE_CONFIG_DATE_TIME_FORMAT);
+        // $lRow[]      = adminFunctions::makeSafe($row['date_created']);
         // $lRow[]      = '<a href="user_manage.php?filterByAccountId='.urlencode($row['user_id']).'">'.adminFunctions::makeSafe($row['username']).'</a>';
         $lRow[]      = adminFunctions::makeSafe($row['name']);
+        $lRow[]      = adminFunctions::makeSafe($row["ammount"]);
+        $lRow[]      = adminFunctions::makeSafe($row['order_id']);
         $lRow[]      = adminFunctions::makeSafe($row['payment_id']);
-        $lRow[]      = adminFunctions::makeSafe($row['ammount']);
-        $lRow[]      = adminFunctions::makeSafe($row['status']);
-        $lRow[]      = adminFunctions::makeSafe($row['created_at']);
+        $lRow[]      = adminFunctions::makeSafe($row["status"]);
 
         $links = array();
         $links[] = '<a href="#" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="top" data-original-title="view" onClick="viewPaymentDetail(' . (int) $row['id'] . '); return false;"><span class="fa fa-info text-primary" aria-hidden="true"></span></a>';
