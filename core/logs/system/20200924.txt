@@ -225,6 +225,7 @@
 )
 
 ===========================================================
+<<<<<<< Updated upstream
 2020-09-24 11:31:02 - Array
 (
     [Error Msg] => Undefined index: filterUserId
@@ -457,273 +458,529 @@
 (
     [Error Msg] => Undefined index: filterUserId
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 10:20:51 - Array
+(
+    [Error Msg] => Undefined index: submitme
+    [File] => E:\xampp\htdocs\ucloud\admin\login.php
+    [Line Number] => 20
+    [Error Type] => E_NOTICE
+)
+
+2020-09-24 10:20:51 - Array
+(
+    [Error Msg] => Undefined index: error
+    [File] => E:\xampp\htdocs\ucloud\admin\login.php
+    [Line Number] => 101
+    [Error Type] => E_NOTICE
+)
+
+2020-09-24 10:20:51 - Array
+(
+    [Error Msg] => Non-static method adminFunctions::getUsersIPAddress() should not be called statically
+    [File] => E:\xampp\htdocs\ucloud\admin\login.php
+    [Line Number] => 128
+    [Error Type] => E_DEPRECATED
+)
+
+===========================================================
+2020-09-24 10:28:16 - Array
+(
+    [Error Msg] => Undefined index: filterUserId
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment_manage.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 10
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 11:46:13 - Array
 (
     [Error Msg] => Undefined variable: filterByUser
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
     [Line Number] => 40
+=======
+2020-09-24 10:28:16 - Array
+(
+    [Error Msg] => Undefined variable: filterByUser
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment_manage.ajax.php
+    [Line Number] => 43
+>>>>>>> Stashed changes
     [Error Type] => E_NOTICE
 )
 
 ===========================================================
+<<<<<<< Updated upstream
 2020-09-24 11:50:05 - Array
 (
     [Error Msg] => Undefined index: filterUserId
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 10:39:24 - Array
+(
+    [Error Msg] => Undefined index: filterUserId
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment_manage.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 10
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 11:50:05 - Array
 (
     [Error Msg] => Undefined variable: filterByUser
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
     [Line Number] => 40
+=======
+2020-09-24 10:39:24 - Array
+(
+    [Error Msg] => Undefined variable: filterByUser
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment_manage.ajax.php
+    [Line Number] => 43
+>>>>>>> Stashed changes
     [Error Type] => E_NOTICE
 )
 
 ===========================================================
+<<<<<<< Updated upstream
 2020-09-24 11:50:30 - Array
 (
     [Error Msg] => Undefined index: filterUserId
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 10:39:35 - Array
+(
+    [Error Msg] => Undefined index: filterUserId
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment_manage.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 10
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 11:50:30 - Array
 (
     [Error Msg] => Undefined variable: filterByUser
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
     [Line Number] => 40
+=======
+2020-09-24 10:39:35 - Array
+(
+    [Error Msg] => Undefined variable: filterByUser
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment_manage.ajax.php
+    [Line Number] => 43
+>>>>>>> Stashed changes
     [Error Type] => E_NOTICE
 )
 
 ===========================================================
+<<<<<<< Updated upstream
 2020-09-24 11:53:04 - Array
 (
     [Error Msg] => Undefined index: filterUserId
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 10:39:39 - Array
+(
+    [Error Msg] => Undefined index: filterUserId
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment_manage.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 10
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 11:53:04 - Array
 (
     [Error Msg] => Undefined variable: filterByUser
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
     [Line Number] => 40
+=======
+2020-09-24 10:39:39 - Array
+(
+    [Error Msg] => Undefined variable: filterByUser
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment_manage.ajax.php
+    [Line Number] => 43
+>>>>>>> Stashed changes
     [Error Type] => E_NOTICE
 )
 
 ===========================================================
+<<<<<<< Updated upstream
 2020-09-24 11:54:51 - Array
 (
     [Error Msg] => Undefined index: filterUserId
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 10:39:51 - Array
+(
+    [Error Msg] => Undefined index: filterUserId
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment_manage.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 10
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 11:54:51 - Array
 (
     [Error Msg] => Undefined variable: filterByUser
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
     [Line Number] => 40
+=======
+2020-09-24 10:39:51 - Array
+(
+    [Error Msg] => Undefined variable: filterByUser
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment_manage.ajax.php
+    [Line Number] => 43
+>>>>>>> Stashed changes
     [Error Type] => E_NOTICE
 )
 
 ===========================================================
+<<<<<<< Updated upstream
 2020-09-24 11:55:23 - Array
 (
     [Error Msg] => Undefined index: filterUserId
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 10:40:30 - Array
+(
+    [Error Msg] => Undefined index: filterUserId
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment_manage.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 10
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 11:55:23 - Array
 (
     [Error Msg] => Undefined variable: filterByUser
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
     [Line Number] => 40
+=======
+2020-09-24 10:40:30 - Array
+(
+    [Error Msg] => Undefined variable: filterByUser
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment_manage.ajax.php
+    [Line Number] => 43
+>>>>>>> Stashed changes
     [Error Type] => E_NOTICE
 )
 
 ===========================================================
+<<<<<<< Updated upstream
 2020-09-24 12:13:11 - Array
 (
     [Error Msg] => Undefined index: filterUserId
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 10:41:02 - Array
+(
+    [Error Msg] => Undefined index: filterUserId
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment_manage.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 10
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 12:13:11 - Array
 (
     [Error Msg] => Undefined variable: filterByUser
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
     [Line Number] => 40
+=======
+2020-09-24 10:41:02 - Array
+(
+    [Error Msg] => Undefined variable: filterByUser
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment_manage.ajax.php
+    [Line Number] => 43
+>>>>>>> Stashed changes
     [Error Type] => E_NOTICE
 )
 
 ===========================================================
+<<<<<<< Updated upstream
 2020-09-24 12:13:44 - Array
 (
     [Error Msg] => Undefined index: filterUserId
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:19:02 - Array
+(
+    [Error Msg] => Undefined index: filterUserId
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 10
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 12:13:44 - Array
 (
     [Error Msg] => Undefined variable: filterByUser
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:19:02 - Array
+(
+    [Error Msg] => Undefined variable: filterByUser
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 40
     [Error Type] => E_NOTICE
 )
 
 ===========================================================
+<<<<<<< Updated upstream
 2020-09-24 12:14:58 - Array
 (
     [Error Msg] => Undefined index: filterUserId
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:19:59 - Array
+(
+    [Error Msg] => Undefined index: filterUserId
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 10
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 12:14:58 - Array
 (
     [Error Msg] => Undefined variable: filterByUser
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:19:59 - Array
+(
+    [Error Msg] => Undefined variable: filterByUser
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 40
     [Error Type] => E_NOTICE
 )
 
 ===========================================================
+<<<<<<< Updated upstream
 2020-09-24 12:16:09 - Array
 (
     [Error Msg] => Undefined index: filterUserId
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:20:19 - Array
+(
+    [Error Msg] => Undefined index: filterUserId
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 10
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 12:16:09 - Array
 (
     [Error Msg] => Undefined variable: filterByUser
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:20:19 - Array
+(
+    [Error Msg] => Undefined variable: filterByUser
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 40
     [Error Type] => E_NOTICE
 )
 
 ===========================================================
+<<<<<<< Updated upstream
 2020-09-24 12:16:35 - Array
 (
     [Error Msg] => Undefined index: filterUserId
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:22:06 - Array
+(
+    [Error Msg] => Undefined index: filterUserId
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 10
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 12:16:35 - Array
 (
     [Error Msg] => Undefined variable: filterByUser
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:22:06 - Array
+(
+    [Error Msg] => Undefined variable: filterByUser
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 40
     [Error Type] => E_NOTICE
 )
 
 ===========================================================
+<<<<<<< Updated upstream
 2020-09-24 12:18:25 - Array
 (
     [Error Msg] => Undefined index: filterUserId
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:22:20 - Array
+(
+    [Error Msg] => Undefined index: filterUserId
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 10
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 12:18:25 - Array
 (
     [Error Msg] => Undefined variable: filterByUser
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:22:20 - Array
+(
+    [Error Msg] => Undefined variable: filterByUser
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 40
     [Error Type] => E_NOTICE
 )
 
 ===========================================================
+<<<<<<< Updated upstream
 2020-09-24 12:22:36 - Array
 (
     [Error Msg] => Undefined index: filterUserId
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:22:38 - Array
+(
+    [Error Msg] => Undefined index: filterUserId
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 10
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 12:22:36 - Array
 (
     [Error Msg] => Undefined variable: filterByUser
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:22:38 - Array
+(
+    [Error Msg] => Undefined variable: filterByUser
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 40
     [Error Type] => E_NOTICE
 )
 
 ===========================================================
+<<<<<<< Updated upstream
 2020-09-24 12:23:15 - Array
 (
     [Error Msg] => Undefined index: filterUserId
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:23:55 - Array
+(
+    [Error Msg] => Undefined index: filterUserId
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 10
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 12:23:15 - Array
 (
     [Error Msg] => Undefined variable: filterByUser
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:23:55 - Array
+(
+    [Error Msg] => Undefined variable: filterByUser
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 40
     [Error Type] => E_NOTICE
 )
 
 ===========================================================
+<<<<<<< Updated upstream
 2020-09-24 12:23:54 - Array
 (
     [Error Msg] => Undefined index: filterUserId
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:24:38 - Array
+(
+    [Error Msg] => Undefined index: filterUserId
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 10
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 12:23:54 - Array
 (
     [Error Msg] => Undefined variable: filterByUser
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:24:38 - Array
+(
+    [Error Msg] => Undefined variable: filterByUser
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 40
     [Error Type] => E_NOTICE
 )
 
 ===========================================================
+<<<<<<< Updated upstream
 2020-09-24 12:24:16 - Array
 (
     [Error Msg] => Undefined index: filterUserId
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:25:33 - Array
+(
+    [Error Msg] => Undefined index: filterUserId
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 10
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 12:24:16 - Array
 (
     [Error Msg] => Undefined variable: filterByUser
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:25:33 - Array
+(
+    [Error Msg] => Undefined variable: filterByUser
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 40
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 12:24:16 - Array
 (
     [Error Msg] => Undefined index: date_created
@@ -745,18 +1002,33 @@
 (
     [Error Msg] => Undefined index: filterUserId
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+===========================================================
+2020-09-24 11:26:30 - Array
+(
+    [Error Msg] => Undefined index: filterUserId
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 10
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 12:27:08 - Array
 (
     [Error Msg] => Undefined variable: filterByUser
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+=======
+2020-09-24 11:26:30 - Array
+(
+    [Error Msg] => Undefined variable: filterByUser
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+>>>>>>> Stashed changes
     [Line Number] => 40
     [Error Type] => E_NOTICE
 )
 
+<<<<<<< Updated upstream
 2020-09-24 12:27:08 - Array
 (
     [Error Msg] => Undefined index: date_created
@@ -3809,6 +4081,85 @@
     [Error Msg] => Undefined index: id
     [File] => C:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
     [Line Number] => 74
+=======
+2020-09-24 11:26:30 - Array
+(
+    [Error Msg] => Undefined index: date_created
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+    [Line Number] => 61
+    [Error Type] => E_NOTICE
+)
+
+2020-09-24 11:26:30 - Array
+(
+    [Error Msg] => Undefined index: id
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+    [Line Number] => 69
+    [Error Type] => E_NOTICE
+)
+
+2020-09-24 11:26:30 - Array
+(
+    [Error Msg] => Undefined index: date_created
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+    [Line Number] => 61
+    [Error Type] => E_NOTICE
+)
+
+2020-09-24 11:26:30 - Array
+(
+    [Error Msg] => Undefined index: id
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+    [Line Number] => 69
+    [Error Type] => E_NOTICE
+)
+
+2020-09-24 11:26:30 - Array
+(
+    [Error Msg] => Undefined index: date_created
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+    [Line Number] => 61
+    [Error Type] => E_NOTICE
+)
+
+2020-09-24 11:26:30 - Array
+(
+    [Error Msg] => Undefined index: id
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+    [Line Number] => 69
+    [Error Type] => E_NOTICE
+)
+
+2020-09-24 11:26:30 - Array
+(
+    [Error Msg] => Undefined index: date_created
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+    [Line Number] => 61
+    [Error Type] => E_NOTICE
+)
+
+2020-09-24 11:26:30 - Array
+(
+    [Error Msg] => Undefined index: id
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+    [Line Number] => 69
+    [Error Type] => E_NOTICE
+)
+
+2020-09-24 11:26:30 - Array
+(
+    [Error Msg] => Undefined index: date_created
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+    [Line Number] => 61
+    [Error Type] => E_NOTICE
+)
+
+2020-09-24 11:26:30 - Array
+(
+    [Error Msg] => Undefined index: id
+    [File] => E:\xampp\htdocs\ucloud\admin\ajax\payment.ajax.php
+    [Line Number] => 69
+>>>>>>> Stashed changes
     [Error Type] => E_NOTICE
 )
 
