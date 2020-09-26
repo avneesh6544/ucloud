@@ -1,4 +1,11 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php';
+
+$AuthUser = Auth::getAuth();
+$db = Database::getDatabase();
+if(!$AuthUser->id){
+    coreFunctions::redirect(WEB_ROOT.'/users/login.php');
+}
+?>
 <body>
 <div style="margin: auto;width: 40%;">
     
@@ -32,6 +39,8 @@
             </div>
         </div>    <br><br> -->
         <p class="text-center"><a href="payment.php"><input type="submit" name="submit" class="btn btn-primary" value="Proceed To Payment" id="butsave"></a></p>
+
+        <p class="text-center"><a href="logout.php"><input type="submit" name="logout" class="btn btn-primary" value="Logout" id="logout"></a></p>
 	
 </div>
 </body>

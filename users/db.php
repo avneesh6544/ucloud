@@ -44,6 +44,12 @@
 	return $insertpayment;
 	}
 
+	public function update_payment_status($razorpay_payment_id, $status)
+	{
+	$insertpayment = mysqli_query($this->dbh,"UPDATE payment_laser SET status = '$status' WHERE payment_id = '$razorpay_payment_id'");
+	return $insertpayment;
+	}
+
 }
 
 

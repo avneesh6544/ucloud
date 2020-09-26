@@ -9,6 +9,13 @@ include_once('_local_auth.inc.php');
 
 // page header
 include_once('_header.inc.php');
+
+$paymentStatusDetails = array('success' => 1, 'failed' => 2, 'processing' => 3);
+$filterByAccountStatus = '';
+if(isset($_REQUEST['filterByAccountStatus']))
+{
+    $filterByAccountStatus = trim($_REQUEST['filterByAccountStatus']);
+}
 ?>
 
 <script>
@@ -35,6 +42,7 @@ include_once('_header.inc.php');
             ],
             "fnServerData": function ( sSource, aoData, fnCallback ) {
                 aoData.push( { "name": "filterText", "value": $('#filterText').val() } );
+                aoData.push({"name": "filterByPaymentStatus", "value": $('#filterByPaymentStatus').val()});
                 $.ajax({
                     "dataType": 'json',
                     "type": "GET",
@@ -238,14 +246,12 @@ include_once('_header.inc.php');
                             <thead>
                                 <tr>
                                     <th></th>
-                                    <th class="align-left"><?php echo UCWords(adminFunctions::t("payment_date", "payment date")); ?></th>
                                     <th class="align-left"><?php echo UCWords(adminFunctions::t("user_name", "user name")); ?></th>
-                                    <th class="align-left"><?php echo UCWords(adminFunctions::t("ammount", "ammount")); ?></th>
+                                    <th class="align-left"><?php echo UCWords(adminFunctions::t("amount", "Amount")); ?></th>
                                     <th class="align-left"><?php echo UCWords(adminFunctions::t("order_id", "order id")); ?></th>
                                     <th class="align-left"><?php echo UCWords(adminFunctions::t("payment_id", "payment id")); ?></th>
-                                    <th class="align-left"><?php echo UCWords(adminFunctions::t("payment_ammount", "ammount")); ?></th>                                                                        
-                                    <th class="align-left"><?php echo UCWords(adminFunctions::t("status", "status")); ?></th>
                                     <th class="align-left"><?php echo UCWords(adminFunctions::t("payment_date", "payment date")); ?></th>
+                                    <th class="align-left"><?php echo UCWords(adminFunctions::t("status", "status")); ?></th>
                                     <th class="align-left"><?php echo UCWords(adminFunctions::t("action", "action")); ?></th>
                                 </tr>
                             </thead>
@@ -267,6 +273,27 @@ include_once('_header.inc.php');
     <label>
         Filter Results:
         <input name="filterText" id="filterText" type="text" onKeyUp="reloadTable(); return false;" style="width: 160px;"/>
+    </label>
+    <label class="adminResponsiveHide" style="padding-left: 6px;">
+        By Status:
+        <select name="filterByPaymentStatus" id="filterByPaymentStatus" onChange="reloadTable();
+                return false;" style="width: 120px;" class="form-control">
+            <option value="">- all -</option>
+<?php
+if(COUNT($paymentStatusDetails))
+{
+    foreach($paymentStatusDetails as $paymentStatusDetail=>$value)
+    {
+        echo '<option value="' . $value . '"';
+        if(($filterByAccountStatus) && ($filterByAccountStatus == $paymentStatusDetail))
+        {
+            echo ' SELECTED';
+        }
+        echo '>' . UCWords($paymentStatusDetail) . '</option>';
+    }
+}
+?>
+        </select>
     </label>
 </div>
 

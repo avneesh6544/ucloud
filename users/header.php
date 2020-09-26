@@ -1,3 +1,9 @@
+<?php 
+
+// setup includes
+require_once('../core/includes/master.inc.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

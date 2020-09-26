@@ -138,7 +138,7 @@ $(document).ready(function(){
 					}
 					else if(dataResult.statusCode==201){
 						$("#error").show();
-						$('#error').html('Email ID already exists !');
+						$('#error').html(dataResult.message);
 					}
 				}
 			});

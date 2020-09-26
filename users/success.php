@@ -21,6 +21,14 @@ if (empty($_POST['razorpay_payment_id']) === false)
 {
     $api = new Api($keyId, $keySecret);
 
+    $user_id = $_SESSION['id'];
+    $razorpay_payment_id = $_POST['razorpay_payment_id'];
+    $razorpay_order_id = $_POST['razorpay_order_id'];
+    $razorpay_signature = $_POST['razorpay_signature'];
+    $ammount = $_POST['ammount']/100;
+    
+// print_r($user_id);die();
+    $insertUserSql = $classNameDb->payment($user_id,$razorpay_payment_id,$razorpay_order_id,$razorpay_signature,$ammount);
     try
     {
         // Please note that the razorpay order ID must
@@ -33,24 +41,18 @@ if (empty($_POST['razorpay_payment_id']) === false)
         );
 
         $api->utility->verifyPaymentSignature($attributes);
+        $classNameDb->update_payment_status($razorpay_payment_id, 1);
     }
     catch(SignatureVerificationError $e)
     {
         $success = false;
+        $classNameDb->update_payment_status($razorpay_payment_id, 2);
         $error = 'Razorpay Error : ' . $e->getMessage();
     }
 }
 
 if ($success === true)
 {
-    $user_id = $_SESSION['id'];
-    $razorpay_payment_id = $_POST['razorpay_payment_id'];
-    $razorpay_order_id = $_POST['razorpay_order_id'];
-    $razorpay_signature = $_POST['razorpay_signature'];
-    $ammount = $_POST['ammount']/100;
-    
-// print_r($user_id);die();
-    $insertUserSql = $classNameDb->payment($user_id,$razorpay_payment_id,$razorpay_order_id,$razorpay_signature,$ammount);
     $html = "<p>Your payment was successful</p>
              <p>Payment ID: {$_POST['razorpay_payment_id']}</p>";
 }
