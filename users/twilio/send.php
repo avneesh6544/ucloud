@@ -10,6 +10,8 @@ if(!$AuthUser->id){
 }
 ?>
 <?php
+echo"<pre>";
+var_dump($AuthUser);die();
 
 // Update the path below to your autoload.php,
 // see https://getcomposer.org/doc/01-basic-usage.md
@@ -23,7 +25,6 @@ $sid    = "AC84236a3b4cabd5755ff374b6baccbc0f";
 $token  = "a81fefca9624f19be21ed0888e89e119";
 
 $mobilenumber = $AuthUser->contact;
-
 
 $rndno=rand(1000, 9999);
 
