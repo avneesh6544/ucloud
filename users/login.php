@@ -48,7 +48,7 @@ $(document).ready(function() {
 	$('#butlogin').on('click', function() {
 		var email = $('#email').val();
 		var password = $('#password').val();
-		if(email!="" && password!="" ){
+		// if(email!="" && password!="" ){
 			$.ajax({
 				url: "userLogin.php",
 				type: "POST",
@@ -64,14 +64,16 @@ $(document).ready(function() {
 					}
 					else if(dataResult.statusCode==201){
 						$("#error").show();
-						$('#error').html('Invalid EmailId or Password !');
+						$('#error').html(dataResult.message);
+						// $('#error').html(dataResult.message);
+						// $('#error').html('Invalid EmailId or Password !');
 					}	
 				}
 			});
-		}
-		else{
-			alert('all feild is required');
-		}
+		// }
+		// else{
+		// 	alert('all feild is required');
+		// }
 	});
 });
 </script>
