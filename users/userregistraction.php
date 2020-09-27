@@ -117,7 +117,7 @@ $checkEmail = UserPeer::loadUserByEmailAddress($email_address);
 
 if(!$error){
 	// create the intial record
-	$dbInsert = new DBObject("users", array("username", "password", "level_id", "email", "status", "title", "firstname", "lastname", "paidExpiryDate", "storageLimitOverride", "uploadServerOverride", "remainingBWDownload"));
+	$dbInsert = new DBObject("users", array("username", "password", "level_id", "email","contact_no", "status", "title", "firstname", "lastname", "paidExpiryDate", "storageLimitOverride", "uploadServerOverride", "remainingBWDownload"));
 	$dbInsert->username = $username;
 	$dbInsert->password = Password::createHash($password);
 	$dbInsert->level_id = $account_type;
