@@ -1,10 +1,11 @@
 <?php
-session_start();
+// session_start();
 if(isset($_POST['submit'])){
     $otp = $_POST['otp'];
-
-    $sessionotp = $_SESSION['otp'];
-
+    session_start();
+    $sessionotp = $_SESSION;
+    echo"<pre>";
+    print_r($sessionotp);die();
     if($sessionotp == $otp){
         echo"login successfully";
     }else{

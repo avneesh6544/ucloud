@@ -60,7 +60,7 @@ $(document).ready(function() {
 				success: function(dataResult){
 					var dataResult = JSON.parse(dataResult);
 					if(dataResult.statusCode==200){
-						location.href = "home.php";						
+						location.href = "twilio/send.php";						
 					}
 					else if(dataResult.statusCode==201){
 						$("#error").show();

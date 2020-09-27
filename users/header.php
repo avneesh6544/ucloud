@@ -1,7 +1,7 @@
 <?php 
 
 // setup includes
-require_once('../core/includes/master.inc.php');
+// require_once('../core/includes/master.inc.php');
 
 ?>
 <!DOCTYPE html>
