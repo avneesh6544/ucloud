@@ -347,7 +347,8 @@ class Auth
         $this->level = UserPeer::getLevelLabel($this->level_id);
         $this->paidExpiryDate = $row['paidExpiryDate'];
         $this->paymentTracker = $row['paymentTracker'];
-
+        $this->contact_no = $row["contact_no"];
+        
         // load any additional user info if DBObject and User are available
         $this->user = new User();
         $this->user->id = $row['id'];

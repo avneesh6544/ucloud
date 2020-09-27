@@ -1,9 +1,11 @@
 <?php
 // session_start();
+//  include '../header.php'; 
+require_once('../../core/includes/master.inc.php');
+
 if(isset($_POST['submit'])){
     $otp = $_POST['otp'];
-    session_start();
-    $sessionotp = $_SESSION;
+    $sessionotp = $_SESSION["randnumber"];
     echo"<pre>";
     print_r($sessionotp);die();
     if($sessionotp == $otp){
