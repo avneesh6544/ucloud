@@ -1,5 +1,5 @@
 <?php include 'header.php';
-
+require_once('../core/includes/master.inc.php');
 $AuthUser = Auth::getAuth();
 $db = Database::getDatabase();
 if(!$AuthUser->id){

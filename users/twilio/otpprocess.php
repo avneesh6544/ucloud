@@ -6,12 +6,13 @@ require_once('../../core/includes/master.inc.php');
 if(isset($_POST['submit'])){
     $otp = $_POST['otp'];
     $sessionotp = $_SESSION["randnumber"];
-    echo"<pre>";
-    print_r($sessionotp);die();
+    // echo"<pre>";
+    // print_r($sessionotp);die();
     if($sessionotp == $otp){
-        echo"login successfully";
+        coreFunctions::redirect(WEB_ROOT.'/users/home.php');
     }else{
-        header('Location: ../login.php');
+        coreFunctions::redirect(WEB_ROOT.'/users/login.php');
+        // header('Location: ../login.php');
     }
     // print_r($sessionotp);
     
