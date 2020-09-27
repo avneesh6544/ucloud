@@ -35,6 +35,7 @@ $sQL = "SELECT id, serverLabel FROM file_server ORDER BY serverLabel";
 $serverDetails = $db->getRows($sQL);
 
 $error = False;
+$error_message = "";
 
 // prepare variables
 $username = '';
@@ -75,22 +76,22 @@ $uploadedAvatar = null;
 if(strlen($first_name) == 0)
     {
 		$error = True;
-		echo json_encode(array("statusCode"=>201, "message", "enter_first_name"));
+		$error_message = "Enter First name";
     }
 elseif(strlen($last_name) == 0)
     {
 		$error = True;
-		echo json_encode(array("statusCode"=>201, "message", "enter_last_name"));
+		$error_message = "Enter Last name";
     }
 elseif(strlen($email_address) == 0)
     {
 		$error = True;
-		echo json_encode(array("statusCode"=>201, "message", "enter_email_address"));
+		$error_message = "Enter Email address";
     }
 elseif(validation::validEmail($email_address) == false)
     {
 		$error = True;
-		echo json_encode(array("statusCode"=>201, "message", "entered_email_address_invalid"));
+		$error_message = "Entered Email address is invalid";
     }
 // elseif($password != $confirm_password)
 // {
@@ -102,7 +103,7 @@ $checkEmail = UserPeer::loadUserByEmailAddress($email_address);
         	{
 				$error = True;
 				// email already exist
-				echo json_encode(array("statusCode"=>201, "message", "email already exists"));
+				$error_message = "email already exists";
 			}	
         else
         {
@@ -110,8 +111,8 @@ $checkEmail = UserPeer::loadUserByEmailAddress($email_address);
             if($checkUser)
             {
 				$error = True;
-                // username exists
-				echo json_encode(array("statusCode"=>201, "message", "Username already exists on another account"));
+				// username exists
+				$error_message = "Username already exists on another account";
             }
 		}
 
@@ -137,6 +138,6 @@ if(!$error){
 	}
 }
 else {	
-		echo json_encode(array("statusCode"=>201, "message", "error_problem_record"));
+		echo json_encode(array("statusCode"=>201, "message"=>$error_message));
 	}
 ?>

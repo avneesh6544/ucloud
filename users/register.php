@@ -112,8 +112,7 @@ $(document).ready(function(){
 		var username = $('#username').val();
         var password = $('#password').val();
 		var contact = $('#contact').val();
-		if(first_name!="" && email!="" && password!=""){
-			$.ajax({
+		$.ajax({
 				url: "userregistraction.php",
 				type: "POST",
 				data: {
@@ -142,11 +141,6 @@ $(document).ready(function(){
 					}
 				}
 			});
-		}
-		else{
-			
-			$.validate();
-		}
 	});
 });
 </script>
